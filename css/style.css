@@ -10,19 +10,20 @@ body {
 /* ----------------------------------------------- main */
 main {
     display: flex;
-    margin-left: 10vh;
+    margin-left: 30vh;
     cursor: default;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    margin-top: 20vh;
 }
 .red {
     position: absolute;
     z-index: -1;
     background-color: #FF5050;
-    margin-top: 25%;
+    margin-top: 10%;
     width: 100%;
-    height: 25vh;
+    height: 40vh;
 }
 h1{
     font-size: 50px;
@@ -131,4 +132,7 @@ footer {
 }
 .icon svg path {
     fill: #FF5050;
+}
+.icon svg {
+    
 }
