@@ -13,9 +13,6 @@ function send() {
 
     let nomval = nom.value;
     let mailval = mail.value;
-    let msgval = msg.value;
-
-    let labmail = document.querySelector('.name');
     
     if ( !nomval.replace(/\s+/,'').length ) {
         nom.style.border = "5px solid red";
@@ -24,10 +21,6 @@ function send() {
     if( !mailval.replace(/\s+/, '').length ) {
         mail.style.border = "5px solid red";
         mail.style.transition = "1s ease-in";
-    }
-    if( !msgval.replace(/\s+/, '').length ) {
-        msg.style.border = "5px solid red";
-        msg.style.transition = "1s ease-in";
     }
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mailval))
     {
@@ -56,6 +49,7 @@ function validateForm()  {
 
     return true;
 }
+
 
 /*
 
