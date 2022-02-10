@@ -125,12 +125,14 @@ input, textarea{
     width: 75%;
     cursor: pointer;
     outline: none;
+    font-size: .5em;
 }
 input::placeholder, textarea::placeholder {
     font-size: 1.5rem;
 }
 #nom {
     border: 5px solid rgba(255, 255, 255, 0);
+    text-transform: capitalize;
 }
 #mail {
     border: 5px solid rgba(255, 255, 255, 0);
@@ -138,6 +140,7 @@ input::placeholder, textarea::placeholder {
 #msg {
     border: 5px solid rgba(255, 255, 255, 0);
     height: 24vh;
+    font-size: .5em;
 }
 /* --------------------------------------------------------- footer */
 footer {
@@ -160,7 +163,6 @@ footer {
     width: 7vh;
     height: 7vh;
 }
-
 @media screen and (min-width: 240px) and (max-width: 414px){
     body {
         width: 53vh;
