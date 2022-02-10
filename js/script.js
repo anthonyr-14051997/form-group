@@ -14,42 +14,52 @@ function send() {
     let nomval = nom.value;
     let mailval = mail.value;
     
-    if ( !nomval.replace(/\s+/,'').length ) {
+    const notnom = document.querySelector('.notnom');
+    const notmail = document.querySelector('.notmail');
+    
+    nom.style.border = "5px";
+    mail.style.border = "5px";
+    notnom.innerHTML = "";
+    notmail.innerHTML = "";
+    
+    if ( nomval == '' ) {
         nom.style.border = "5px solid red";
-        nom.style.transition = "1s ease-in";
-    }
-    if( !mailval.replace(/\s+/, '').length ) {
+        notnom.innerHTML = "Le champs est vide !";
+        notnom.style.color = "red";
+    } else
+    if( mailval == '' ) {
         mail.style.border = "5px solid red";
-        mail.style.transition = "1s ease-in";
+        notmail.innerHTML = "Le champs est vide !";
+        notmail.style.color = "red";
+    } else
+    if (nomval.length < 3) {
+        nom.style.border = "5px solid red";
+        notnom.innerHTML = "Exemple : Max";
+        notnom.style.color = "red";
     }
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mailval))
-    {
-        return (true)
-    }
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(String(mailval).toLowerCase()) == false) {
         mail.style.border = "5px solid red";
-        labmail.innerHTML = 'Adresse mail non valid';
-        labmail.style.color = 'red';
-        return (false)
-}
+        notmail.innerHTML = "Exemple : exemple@gmail.com";
+        notmail.style.color = "red";
+    } else {
 
-function validateForm()  {
-    var u = document.getElementById("username").value;
-    var p = document.getElementById("password").value;
+        let sendmail = document.querySelector('.send').val;
+        btn.textContent = "Merci !" + sendmail;
 
-    if(u== "") {
-        alert("Please enter your Username");
-        return false;
+        btn.appendChild(sendmail);
+
+        sendmail.animate([
+            // keyframes
+            { left: '20%' },
+            { right: '100%' }
+          ], {
+            // timing options
+            duration: 1000,
+            iterations: 1
+          });
     }
-    if(p == "") {
-        alert("Please enter you Password");
-        return false;
-    }
-
-    alert("All datas are valid!, send it to the server!")
-
-    return true;
 }
-
 
 /*
 
