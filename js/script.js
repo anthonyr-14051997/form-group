@@ -6,19 +6,17 @@ const msg = document.querySelector('#msg');
 
 const notsend = document.querySelector('.notsend');
 
-
-btn.addEventListener('click', send);
-
 function send() {
 
     let nomval = nom.value;
     let mailval = mail.value;
+    /* let msgval = msg.value; */
     
     const notnom = document.querySelector('.notnom');
     const notmail = document.querySelector('.notmail');
     
-    nom.style.border = "5px";
-    mail.style.border = "5px";
+    nom.style.border = "5px solid rgba(255, 255, 255, 0)";
+    mail.style.border = "5px solid rgba(255, 255, 255, 0)";
     notnom.innerHTML = "";
     notmail.innerHTML = "";
     
@@ -32,7 +30,7 @@ function send() {
         notmail.innerHTML = "Le champs est vide !";
         notmail.style.color = "red";
     } else
-    if (nomval.length < 3) {
+    if (nomval.length < 2 && nomval.toUperCase() == false) {
         nom.style.border = "5px solid red";
         notnom.innerHTML = "Exemple : Max";
         notnom.style.color = "red";
@@ -44,12 +42,21 @@ function send() {
         notmail.style.color = "red";
     } else {
 
-        let sendmail = document.querySelector('.send').val;
-        btn.textContent = "Merci !" + sendmail;
+        let sendmail = document.querySelector('.send');
+        
+        btn.textContent = "Merci !";
 
         btn.appendChild(sendmail);
 
-        sendmail.animate([
+        return true
+
+        /* let infoval = [nomval + msgval];
+
+        mailval.open('mailto:aruby9905@gmail.com');
+
+        console.log(allval); */
+
+        /* sendmail.animate([
             // keyframes
             { left: '20%' },
             { right: '100%' }
@@ -57,8 +64,9 @@ function send() {
             // timing options
             duration: 1000,
             iterations: 1
-          });
+          }); */
     }
+    return false
 }
 
 /*
