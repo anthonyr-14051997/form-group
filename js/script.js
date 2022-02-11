@@ -58,24 +58,11 @@ function send() {
 
         return true //Envoie du formulaire
 
-        /* let infoval = [nomval + msgval];
-
-        mailval.open('mailto:aruby9905@gmail.com');
-
-        console.log(allval); */
-
-        /* sendmail.animate([
-            // keyframes
-            { left: '20%' },
-            { right: '100%' }
-          ], {
-            // timing options
-            duration: 1000,
-            iterations: 1
-          }); */
     }
     return false //refus d'envoie du formulaire
 }
+
+
 
 /*
 
