@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="red"></div>
+    <div class="red"></div> <!-- rectangle rouge presque au centre de la page -->
 
     <main>
 
@@ -30,11 +30,11 @@
         </section>
     <!-- -------------------------------------------------------- formulaire -->
         <section class="notsend">
-            <form action="mail.php" method="get" id="formulaire" name="myForm" onsubmit="return send()"  novalidate>
+            <form action="./php/mail.php" method="post" id="formulaire" name="myForm" onsubmit="return send()" novalidate  required>
 
                 <h2>Formulaire de contact</h2>
 
-                <div class="ligne"></div>
+                <div class="ligne"></div><!-- ligne en dessous de formulaire -->
                 
                 <div class="form-group">
                     <h3>
@@ -57,7 +57,7 @@
                     </h3>
                 </div>
 
-                <button type="submit">Envoyer
+                <button type="submit" name="btn">Envoyer
                     <svg class="send" width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M55.8334 11.1665H16.75C13.6708 11.1665 11.1667 13.6706 11.1667 16.7498V30.7082H16.75V22.3332L34.6167 35.7332C35.1001 36.0952 35.6878 36.2908 36.2917 36.2908C36.8956 36.2908 37.4833 36.0952 37.9667 35.7332L55.8334 22.3332V47.4582H33.5V53.0415H55.8334C58.9126 53.0415 61.4167 50.5374 61.4167 47.4582V16.7498C61.4167 13.6706 58.9126 11.1665 55.8334 11.1665ZM36.2917 30.0103L18.6093 16.7498H53.9741L36.2917 30.0103Z" fill="#F8F8F8"/>
                         <path d="M5.58331 33.5H25.125V39.0833H5.58331V33.5ZM11.1666 41.875H27.9166V47.4583H11.1666V41.875ZM19.5416 50.25H30.7083V55.8333H19.5416V50.25Z" fill="#F8F8F8"/>
@@ -66,7 +66,7 @@
 
             </form>
             
-        </section>
+        </section> <!-- section : /notsend -->
     </main>
 <!-- ------------------------------------------------------------------------------- icon -->
     <footer>
@@ -92,7 +92,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 46.7596C0 69.8779 16.6098 89.1017 38.3333 93V59.4154H26.8333V46.5H38.3333V36.1654C38.3333 24.5404 45.7432 18.0846 56.2235 18.0846C59.5432 18.0846 63.1235 18.6 66.4432 19.1154V31H60.5667C54.9432 31 53.6667 33.8404 53.6667 37.4596V46.5H65.9333L63.8902 59.4154H53.6667V93C75.3902 89.1017 92 69.8818 92 46.7596C92 21.0413 71.3 0 46 0C20.7 0 0 21.0413 0 46.7596Z" fill="#FF5050"/>
                 </svg>
             </a>
-        </section>
+        </section> <!-- section : /icon -->
     </footer>
 
     <script src="./js/script.js"></script>
