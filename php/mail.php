@@ -3,7 +3,7 @@
 <?php
 /* Page: contact.php */
 //mettez ici votre adresse mail
-$VotreAdresseMail="aruby9905@gmail.com";
+$VotreAdresseMail="a.ruby@codeur.online";
 // si le bouton "Envoyer" est cliqué
 if(isset($_POST['submit'])) {
     //on vérifie que le champ mail est correctement rempli
