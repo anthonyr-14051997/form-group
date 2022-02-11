@@ -1,10 +1,30 @@
+
+<!-- ------------------------------------------------------------------------------- php -->
 <?php
-    if (isset($_POST['msg'])) {
-        $retour = mail('aruby9905@gmail.com', 'Envoi depuis la page Contact', $_POST['msg'], $_POST['nom'], $_POST['mail'], 
-            'From: webmaster@monsite.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
-        if ($retour)
-            echo '<p>Votre message a bien été envoyé.</p>';
-    }
+
+echo "cc", "\n";
+if (isset($_POST['btn'])) {
+    echo "cc";
+    $nom = $_POST['nom'];
+    $mail = $_POST['mail'];
+    $msg = $_POST['msg'];
+    $btn = $_POST['button'];
+    $all = $nom + $mail + $msg;
+    $retour = mail('aruby9905@gmail.com','test', $all);
+    echo $retour;
+    exit;
+}
+
 ?>
-<?php echo 'essai'; ?>
-            
+
+
+<!--
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'path/to/PHPMailer-master/src/Exception.php';
+    require 'path/to/PHPMailer-master/src/PHPMailer.php';
+    require 'path/to/PHPMailer-master/src/SMTP.php';
+
+    " phpmailer " !!!! 
+-->
