@@ -131,7 +131,7 @@ input, textarea{
     font-size: .5em;
 }
 input::placeholder, textarea::placeholder {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 #nom {
     border: 5px solid rgba(255, 255, 255, 0);
@@ -168,9 +168,6 @@ footer {
 }
 /* ------------------------------------------------ media telephone */
 @media screen and (min-width: 240px) and (max-width: 414px){
-    body {
-        width: 53vh;
-    }
     main {
         width: 100%;
         margin: 3vh;
@@ -227,7 +224,7 @@ footer {
         height: 3vh;
     }
     input::placeholder, textarea::placeholder {
-        font-size: 1em;
+        font-size: 3.5em;
     }
     #msg {
         height: 10vh;
@@ -246,9 +243,9 @@ footer {
     }
 }
 /* ------------------------------------------------ media telephone */
-@media screen and (min-width: 414px) and (max-width: 525px){
+@media screen and (min-width: 415px) and (max-width: 525px){
     body {
-        width: 45vh;
+        width: 60vh;
     }
     main {
         width: 100%;
@@ -302,12 +299,17 @@ footer {
         width: 100%;
         margin: 0;
     }
-    input, textarea {
+    input {
         width: 90%;
         height: 5vh;
+        font-size: 2em;
+    }
+    #msg {
+        width: 90%;
+        font-size: 2.5em;
     }
     input::placeholder, textarea::placeholder {
-        font-size: 1.2em;
+        font-size: 1em;
     }
     #msg {
         height: 10vh;
@@ -326,10 +328,7 @@ footer {
     }
 }
 /* ------------------------------------------------ media tablette */
-@media screen and (min-width: 530px) and (max-width: 655px){
-    body {
-        width: 55vh;
-    }
+@media screen and (min-width: 526px) and (max-width: 655px){
     main {
         width: 100%;
         margin: 3vh;
@@ -338,7 +337,7 @@ footer {
     }
     h1 {
         margin-bottom: 0vh;
-        font-size: 3em;
+        font-size: 2em;
     }
     h2 {
         font-size: 2.5em;
@@ -351,7 +350,7 @@ footer {
     }
     h4 {
         width: 100%;
-        font-size: 2.5em;
+        font-size: 1.8em;
         margin-bottom: 1vh;
     }
     .para {
@@ -359,7 +358,7 @@ footer {
         margin: 0;
     }
     p {
-        font-size: 2em;
+        font-size: 1em;
     }
     .formp {
         font-size: 1.5em;
@@ -381,12 +380,17 @@ footer {
         width: 100%;
         margin: 0;
     }
-    input, textarea {
+    input {
         width: 90%;
         height: 5vh;
+        font-size: 1em;
+    }
+    #msg {
+        width: 90%;
+        font-size: 1.5em;
     }
     input::placeholder, textarea::placeholder {
-        font-size: 2em;
+        font-size: 1em;
     }
     #msg {
         height: 15vh;
@@ -394,7 +398,88 @@ footer {
     }
     button {
         margin: 0;
-        font-size: 2.5em;
+        font-size: 2em;
+    }
+    .send {
+        width: 5vh;
+        height: 5vh;
+    }
+    .icon {
+        width: 100%;
+    }
+}
+/* ------------------------------------------------ media tablette */
+@media screen and (min-width: 656px) and (max-width: 956px) {
+    main {
+        width: 100%;
+        margin: 3vh;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        margin-bottom: 0vh;
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .ligne {
+        width: 90%;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    h4 {
+        width: 100%;
+        font-size: 1.5em;
+        margin-bottom: 1vh;
+    }
+    .para {
+        width: 100%;
+        margin: 0;
+    }
+    p {
+        font-size: 1em;
+    }
+    .formp {
+        font-size: 1.5em;
+    }
+    .infosplus {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+    .red {
+        bottom: 13%;
+        height: 20vh;
+    }
+    .infos {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .notsend {
+        width: 100%;
+        margin: 0;
+    }
+    input {
+        width: 90%;
+        height: 5vh;
+        font-size: 1em;
+    }
+    #msg {
+        width: 90%;
+        font-size: 1.5em;
+    }
+    input::placeholder, textarea::placeholder {
+        font-size: 1em;
+    }
+    #msg {
+        height: 15vh;
+        margin: 0;
+    }
+    button {
+        margin: 0;
+        font-size: 2em;
     }
     .send {
         width: 6vh;
@@ -404,11 +489,7 @@ footer {
         width: 100%;
     }
 }
-/* ------------------------------------------------ media tablette */
-@media screen and (min-width: 650px) and (max-width: 956px){
-    body {
-        width: 70vh;
-    }
+@media screen and (min-width: 957px) and (max-width: 1305px) {
     main {
         width: 100%;
         margin: 3vh;
@@ -417,10 +498,10 @@ footer {
     }
     h1 {
         margin-bottom: 0vh;
-        font-size: 3em;
+        font-size: 2em;
     }
     h2 {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
     .ligne {
         width: 90%;
@@ -430,7 +511,7 @@ footer {
     }
     h4 {
         width: 100%;
-        font-size: 2.5em;
+        font-size: 1.5em;
         margin-bottom: 1vh;
     }
     .para {
@@ -438,7 +519,7 @@ footer {
         margin: 0;
     }
     p {
-        font-size: 2em;
+        font-size: 1em;
     }
     .formp {
         font-size: 1.5em;
@@ -460,91 +541,17 @@ footer {
         width: 100%;
         margin: 0;
     }
-    input, textarea {
+    input {
         width: 90%;
         height: 5vh;
-    }
-    input::placeholder, textarea::placeholder {
-        font-size: 2em;
-    }
-    #msg {
-        height: 15vh;
-        margin: 0;
-    }
-    button {
-        margin: 0;
-        font-size: 2.5em;
-    }
-    .send {
-        width: 6vh;
-        height: 6vh;
-    }
-    .icon {
-        width: 100%;
-    }
-}
-/* ------------------------------------------------ media tablette */
-@media screen and (min-height: 1366px) and (max-height: 2565px){
-    body {
-        width: 55vh;
-    }
-    main {
-        width: 100%;
-        margin: 3vh;
-        display: flex;
-        flex-direction: column;
-    }
-    h1 {
-        margin-bottom: 0vh;
-        font-size: 3em;
-    }
-    h2 {
-        font-size: 2.5em;
-    }
-    .ligne {
-        width: 90%;
-    }
-    h3 {
         font-size: 1em;
     }
-    h4 {
-        width: 100%;
-        font-size: 2.5em;
-        margin-bottom: 1vh;
-    }
-    .para {
-        width: 100%;
-        margin: 0;
-    }
-    p {
-        font-size: 2em;
-    }
-    .formp {
+    #msg {
+        width: 90%;
         font-size: 1.5em;
     }
-    .infosplus {
-        width: 90%;
-        margin-bottom: 2vh;
-    }
-    .red {
-        bottom: 13%;
-        height: 20vh;
-    }
-    .infos {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-    .notsend {
-        width: 100%;
-        margin: 0;
-    }
-    input, textarea {
-        width: 90%;
-        height: 5vh;
-    }
     input::placeholder, textarea::placeholder {
-        font-size: 2em;
+        font-size: 1em;
     }
     #msg {
         height: 15vh;
@@ -552,7 +559,7 @@ footer {
     }
     button {
         margin: 0;
-        font-size: 2.5em;
+        font-size: 2em;
     }
     .send {
         width: 6vh;
