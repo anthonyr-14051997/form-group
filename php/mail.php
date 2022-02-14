@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
         if(!preg_match("#^[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?@[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?\.[a-z]{2,}$#i",$_POST['mail'])){
             echo "L'adresse mail entrée est incorrecte";
         }else{
-            //on vérifie que le champ sujet est correctement rempli
+            //on vérifie que le champ nom est correctement rempli
             if(empty($_POST['nom'])) {
                 echo "Le champ prenom est vide";
             }else{
@@ -26,7 +26,7 @@ if(isset($_POST['submit'])) {
                     //on renseigne les entêtes de la fonction mail de PHP
                     $Entetes = "MIME-Version: 1.0\r\n";
                     $Entetes .= "Content-type: text/html; charset=UTF-8\r\n";
-                    $Entetes .= "From: Formulaire <".$_POST['mail'].">\r\n";//de préférence une adresse avec le même domaine de là où, vous utilisez ce code, cela permet un envoie quasi certain jusqu'au destinataire
+                    $Entetes .= "From: Formulaire <".$_POST['mail'].">\r\n";
                     $Entetes .= "Reply-To: Formulaire <".$_POST['mail'].">\r\n";
                     //on prépare les champs:
                     $Mail=$_POST['mail']; 
@@ -35,6 +35,7 @@ if(isset($_POST['submit'])) {
                     //en fin, on envoi le mail
                     if(mail($VotreAdresseMail,$Sujet,nl2br($Message),$Entetes)){//la fonction nl2br permet de conserver les sauts de ligne et la fonction base64_encode de conserver les accents dans le titre
                         echo "Le mail à été envoyé avec succès!";
+                        /* echo json_encode() */
                     } else {
                         echo "Une erreur est survenue, le mail n'a pas été envoyé";
                     }
@@ -44,4 +45,9 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
+
+<!-- 
+#[<>]# = pas de chevron
+[a-zA-Z] = lettre
+ -->
 
